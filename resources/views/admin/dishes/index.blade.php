@@ -8,7 +8,7 @@
             <h1 class="text-3xl font-bold text-gray-900">Platos</h1>
             <p class="text-gray-500 mt-1">Mantenimiento del menú de platos</p>
         </div>
-        <a href="{{ route('admin.dishes.create') }}" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
+        <a href="{{ route('admin.dishes.create') }}" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
             + Nuevo plato
         </a>
     </div>
@@ -31,7 +31,7 @@
                     <td class="px-6 py-4 font-medium text-gray-900">{{ $dish->name }}</td>
                     <td class="px-6 py-4 text-gray-600">{{ $dish->category->name }}</td>
                     <td class="px-6 py-4 text-gray-500 max-w-xs truncate">{{ $dish->description ?? '—' }}</td>
-                    <td class="px-6 py-4 text-right font-semibold text-orange-600">S/ {{ number_format($dish->price, 2) }}</td>
+                    <td class="px-6 py-4 text-right font-semibold text-red-600">S/ {{ number_format($dish->price, 2) }}</td>
                     <td class="px-6 py-4 text-center">
                         @if($dish->available)
                             <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Disponible</span>
@@ -59,3 +59,4 @@
     </div>
 </div>
 @endsection
+

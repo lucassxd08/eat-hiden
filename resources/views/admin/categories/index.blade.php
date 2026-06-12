@@ -8,7 +8,7 @@
             <h1 class="text-3xl font-bold text-gray-900">Categorías</h1>
             <p class="text-gray-500 mt-1">Mantenimiento de categorías del menú</p>
         </div>
-        <a href="{{ route('admin.categories.create') }}" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
+        <a href="{{ route('admin.categories.create') }}" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
             + Nueva categoría
         </a>
     </div>
@@ -57,3 +57,4 @@
     </div>
 </div>
 @endsection
+

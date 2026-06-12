@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: #000000;
+    --color-accent: #ef4444;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-accent);
+  }
+
+  a {
+    color: var(--color-accent);
+  }
+
+  .card, .panel {
+    background-color: transparent;
+    border: 1px solid rgba(239,68,68,0.15);
+    color: var(--color-accent);
+  }
+}
+
+@layer utilities {
+  .bg-site-background { background-color: var(--color-background) !important; }
+  .text-site-accent { color: var(--color-accent) !important; }
+  .bg-site-accent { background-color: var(--color-accent) !important; }
+  .border-site-accent { border-color: var(--color-accent) !important; }
+}

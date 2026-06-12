@@ -15,19 +15,19 @@
                 @forelse($categories as $category)
                     @if($category->dishes->count())
                     <div>
-                        <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-orange-200 pb-2">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-red-200 pb-2">
                             {{ $category->name }}
                         </h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             @foreach($category->dishes as $dish)
                             <div class="bg-white rounded-xl shadow p-4 flex gap-4 items-start">
-                                <div class="bg-orange-50 rounded-lg w-16 h-16 flex items-center justify-center text-3xl flex-shrink-0">🍽</div>
+                                <div class="bg-red-50 rounded-lg w-16 h-16 flex items-center justify-center text-3xl flex-shrink-0">🍽</div>
                                 <div class="flex-1">
                                     <h3 class="font-semibold text-gray-900">{{ $dish->name }}</h3>
                                     @if($dish->description)
                                         <p class="text-gray-500 text-xs mt-0.5 line-clamp-2">{{ $dish->description }}</p>
                                     @endif
-                                    <p class="text-orange-500 font-bold mt-1">S/ {{ number_format($dish->price, 2) }}</p>
+                                    <p class="text-red-500 font-bold mt-1">S/ {{ number_format($dish->price, 2) }}</p>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <input type="number"
@@ -37,7 +37,7 @@
                                         data-price="{{ $dish->price }}"
                                         data-name="{{ $dish->name }}"
                                         onchange="updateCart(this)"
-                                        class="w-16 border border-gray-300 rounded-lg text-center text-sm py-1 focus:outline-none focus:ring-2 focus:ring-orange-400">
+                                        class="w-16 border border-gray-300 rounded-lg text-center text-sm py-1 focus:outline-none focus:ring-2 focus:ring-red-400">
                                 </div>
                             </div>
                             @endforeach
@@ -70,19 +70,19 @@
                             <label class="block text-sm font-medium text-gray-700 mb-1">Dirección de entrega *</label>
                             <input type="text" name="delivery_address" value="{{ auth()->user()->address }}"
                                 required placeholder="Ej: Av. Larco 123, Miraflores"
-                                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400">
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Notas adicionales</label>
                             <textarea name="notes" rows="2" placeholder="Ej: sin cebolla, extra salsa..."
-                                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+                                class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
                         </div>
 
                         <div id="hidden-items"></div>
 
                         <button type="submit" id="submit-btn" disabled
-                            class="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition">
+                            class="w-full bg-red-500 hover:bg-red-600 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-3 rounded-xl transition">
                             Confirmar pedido
                         </button>
                     </div>
@@ -162,3 +162,4 @@ function renderCart() {
 }
 </script>
 @endsection
+

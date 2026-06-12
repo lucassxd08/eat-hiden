@@ -30,12 +30,12 @@
                     <p class="text-gray-600 text-sm mt-0.5">
                         Dirección: <strong>{{ $order->delivery_address }}</strong>
                     </p>
-                    <p class="text-orange-500 font-bold mt-1">S/ {{ number_format($order->total, 2) }}</p>
+                    <p class="text-red-500 font-bold mt-1">S/ {{ number_format($order->total, 2) }}</p>
                 </div>
 
                 <form method="POST" action="{{ route('delivery.update-status', $order) }}" class="flex items-center gap-2">
                     @csrf @method('PATCH')
-                    <select name="status" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400">
+                    <select name="status" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
                         @if($order->status === 'ready')
                             <option value="delivering">Recoger y salir a entregar</option>
                         @elseif($order->status === 'delivering')
@@ -57,3 +57,4 @@
     @endforelse
 </div>
 @endsection
+

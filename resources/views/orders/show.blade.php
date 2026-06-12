@@ -4,7 +4,7 @@
 @section('content')
 <div class="max-w-2xl mx-auto px-4 py-10">
     <div class="mb-6">
-        <a href="{{ route('orders.index') }}" class="text-orange-500 hover:underline text-sm">&larr; Mis pedidos</a>
+        <a href="{{ route('orders.index') }}" class="text-red-500 hover:underline text-sm">&larr; Mis pedidos</a>
         <h1 class="text-3xl font-bold text-gray-900 mt-2">Pedido #{{ $order->id }}</h1>
     </div>
 
@@ -19,7 +19,7 @@
                 $statusColors = [
                     'pending'    => 'bg-yellow-100 text-yellow-700',
                     'confirmed'  => 'bg-blue-100 text-blue-700',
-                    'preparing'  => 'bg-orange-100 text-orange-700',
+                    'preparing'  => 'bg-red-100 text-red-700',
                     'ready'      => 'bg-green-100 text-green-700',
                     'delivering' => 'bg-indigo-100 text-indigo-700',
                     'delivered'  => 'bg-green-200 text-green-800',
@@ -84,7 +84,7 @@
                 <tfoot class="border-t">
                     <tr>
                         <td colspan="3" class="pt-3 text-right font-bold text-gray-900">Total</td>
-                        <td class="pt-3 text-right font-bold text-orange-500 text-lg">S/ {{ number_format($order->total, 2) }}</td>
+                        <td class="pt-3 text-right font-bold text-red-500 text-lg">S/ {{ number_format($order->total, 2) }}</td>
                     </tr>
                 </tfoot>
             </table>
@@ -92,3 +92,4 @@
     </div>
 </div>
 @endsection
+

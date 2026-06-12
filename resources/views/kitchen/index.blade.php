@@ -11,12 +11,12 @@
         $statusColors = [
             'pending'   => 'bg-yellow-100 text-yellow-700 border-yellow-200',
             'confirmed' => 'bg-blue-100 text-blue-700 border-blue-200',
-            'preparing' => 'bg-orange-100 text-orange-700 border-orange-200',
+            'preparing' => 'bg-red-100 text-red-700 border-red-200',
             'ready'     => 'bg-green-100 text-green-700 border-green-200',
         ];
         $color = $statusColors[$order->status] ?? 'bg-gray-100 text-gray-700 border-gray-200';
     @endphp
-    <div class="bg-white rounded-2xl shadow mb-6 overflow-hidden border-l-4 {{ str_contains($color, 'yellow') ? 'border-yellow-400' : (str_contains($color, 'blue') ? 'border-blue-400' : (str_contains($color, 'orange') ? 'border-orange-400' : 'border-green-400')) }}">
+    <div class="bg-white rounded-2xl shadow mb-6 overflow-hidden border-l-4 {{ str_contains($color, 'yellow') ? 'border-yellow-400' : (str_contains($color, 'blue') ? 'border-blue-400' : (str_contains($color, 'orange') ? 'border-red-400' : 'border-green-400')) }}">
         <div class="p-6">
             <div class="flex items-start justify-between flex-wrap gap-4">
                 <div>
@@ -38,7 +38,7 @@
 
                 <form method="POST" action="{{ route('kitchen.update-status', $order) }}" class="flex items-center gap-2">
                     @csrf @method('PATCH')
-                    <select name="status" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400">
+                    <select name="status" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
                         @if($order->status === 'pending')
                             <option value="confirmed">Confirmar</option>
                             <option value="cancelled">Cancelar</option>
@@ -48,7 +48,7 @@
                             <option value="ready">Marcar como listo</option>
                         @endif
                     </select>
-                    <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
                         Actualizar
                     </button>
                 </form>
@@ -82,3 +82,4 @@
     @endforelse
 </div>
 @endsection
+

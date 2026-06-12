@@ -8,7 +8,7 @@
             <h1 class="text-3xl font-bold text-gray-900">Usuarios</h1>
             <p class="text-gray-500 mt-1">Gestión de usuarios y perfiles del sistema</p>
         </div>
-        <a href="{{ route('admin.users.create') }}" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
+        <a href="{{ route('admin.users.create') }}" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
             + Nuevo usuario
         </a>
     </div>
@@ -71,3 +71,4 @@
     </div>
 </div>
 @endsection
+

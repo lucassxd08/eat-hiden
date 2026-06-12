@@ -8,7 +8,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <div>
-            <h2 class="text-2xl font-bold mb-4 text-orange-500">Nuestra misión</h2>
+            <h2 class="text-2xl font-bold mb-4 text-red-500">Nuestra misión</h2>
             <p class="text-gray-600 leading-relaxed">
                 EatHidden nació para dar visibilidad a los mejores cocineros que operan
                 sin un local físico. Creemos que la calidad no necesita cuatro paredes:
@@ -16,7 +16,7 @@
             </p>
         </div>
         <div>
-            <h2 class="text-2xl font-bold mb-4 text-orange-500">¿Qué es una dark kitchen?</h2>
+            <h2 class="text-2xl font-bold mb-4 text-red-500">¿Qué es una dark kitchen?</h2>
             <p class="text-gray-600 leading-relaxed">
                 Una dark kitchen es un restaurante 100% orientado al delivery: sin salón,
                 sin atención presencial. Esto permite reducir costos y enfocarse únicamente
@@ -27,17 +27,18 @@
 
     <div class="bg-gray-900 text-white rounded-2xl p-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
-            <p class="text-5xl font-bold text-orange-400 mb-2">100%</p>
+            <p class="text-5xl font-bold text-red-400 mb-2">100%</p>
             <p class="text-gray-300">Enfoque en delivery</p>
         </div>
         <div>
-            <p class="text-5xl font-bold text-orange-400 mb-2">4</p>
+            <p class="text-5xl font-bold text-red-400 mb-2">4</p>
             <p class="text-gray-300">Roles especializados</p>
         </div>
         <div>
-            <p class="text-5xl font-bold text-orange-400 mb-2">30'</p>
+            <p class="text-5xl font-bold text-red-400 mb-2">30'</p>
             <p class="text-gray-300">Tiempo promedio de entrega</p>
         </div>
     </div>
 </div>
 @endsection
+
