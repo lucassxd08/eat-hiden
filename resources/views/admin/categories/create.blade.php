@@ -4,7 +4,11 @@
 @section('content')
 <div class="max-w-xl mx-auto px-4 py-10">
     <div class="mb-6">
+<<<<<<< HEAD
+        <a href="{{ route('admin.categories.index') }}" class="text-red-600 hover:underline text-sm">&larr; Volver a categorías</a>
+=======
         <a href="{{ route('admin.categories.index') }}" class="text-red-500 hover:underline text-sm">&larr; Volver a categorías</a>
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
         <h1 class="text-3xl font-bold text-gray-900 mt-2">Nueva categoría</h1>
     </div>
 
@@ -16,20 +20,32 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Nombre *</label>
                     <input type="text" name="name" value="{{ old('name') }}"
+<<<<<<< HEAD
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 @error('name') border-red-400 @enderror">
+=======
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400 @error('name') border-red-400 @enderror">
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
                     @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                 </div>
 
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Descripción</label>
                     <input type="text" name="description" value="{{ old('description') }}"
+<<<<<<< HEAD
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+=======
                         class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
                 </div>
 
                 <div class="flex items-center gap-2">
                     <input type="hidden" name="active" value="0">
                     <input type="checkbox" name="active" value="1" id="active" {{ old('active', '1') ? 'checked' : '' }}
+<<<<<<< HEAD
+                        class="w-4 h-4 accent-red-600">
+=======
                         class="w-4 h-4 accent-red-500">
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
                     <label for="active" class="text-sm font-medium text-gray-700">Categoría activa</label>
                 </div>
             </div>
@@ -38,7 +54,11 @@
                 <a href="{{ route('admin.categories.index') }}" class="border border-gray-300 text-gray-600 px-5 py-2 rounded-lg hover:bg-gray-50 text-sm transition">
                     Cancelar
                 </a>
+<<<<<<< HEAD
+                <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2 rounded-lg text-sm transition">
+=======
                 <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2 rounded-lg text-sm transition">
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
                     Crear categoría
                 </button>
             </div>

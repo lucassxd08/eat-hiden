@@ -8,7 +8,7 @@
         <h1 class="text-3xl font-bold text-gray-900 mt-2">Nuevo usuario</h1>
     </div>
 
-    <div class="bg-white rounded-2xl shadow p-8">
+    <div class="text-red-500 hover:underline text-sm">
         <form method="POST" action="{{ route('admin.users.store') }}">
             @csrf
 

@@ -8,7 +8,11 @@
             <h1 class="text-3xl font-bold text-gray-900">Categorías</h1>
             <p class="text-gray-500 mt-1">Mantenimiento de categorías del menú</p>
         </div>
+<<<<<<< HEAD
+        <a href="{{ route('admin.categories.create') }}" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2.5 rounded-lg transition">
+=======
         <a href="{{ route('admin.categories.create') }}" class="bg-red-500 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-lg transition">
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
             + Nueva categoría
         </a>
     </div>
@@ -42,7 +46,7 @@
                             <a href="{{ route('admin.categories.edit', $category) }}" class="text-blue-600 hover:underline text-xs font-medium">Editar</a>
                             <form method="POST" action="{{ route('admin.categories.destroy', $category) }}" onsubmit="return confirm('¿Eliminar esta categoría?')">
                                 @csrf @method('DELETE')
-                                <button class="text-red-500 hover:underline text-xs font-medium">Eliminar</button>
+                                <button class="text-red-600 hover:underline text-xs font-medium">Eliminar</button>
                             </form>
                         </div>
                     </td>

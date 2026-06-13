@@ -3,23 +3,29 @@
 
 @section('content')
 <div class="max-w-5xl mx-auto px-4 py-10">
+<<<<<<< HEAD
+    <h1 class="text-3xl font-bold text-black mb-2">Entregas</h1>
+    <p class="text-gray-500 mb-8">Pedidos listos para recoger y en camino</p>
+=======
     <h1 class="text-3xl font-bold text-gray-900 mb-2">Panel de Entregas</h1>
     <p class="text-gray-500 mb-8">Elegí un pedido listo para recoger o gestioná los que ya tenés en camino</p>
 
     @if(session('success'))
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">{{ session('success') }}</div>
     @endif
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
 
     @forelse($orders as $order)
     @php
         $isMine = $order->delivery_id === auth()->id();
         $colorMap = [
             'ready'      => ['bg-green-100 text-green-700', 'border-green-400'],
-            'delivering' => ['bg-indigo-100 text-indigo-700', 'border-indigo-400'],
+            'delivering' => ['bg-red-100 text-red-700', 'border-red-400'],
         ];
         [$badgeColor, $borderColor] = $colorMap[$order->status] ?? ['bg-gray-100 text-gray-600', 'border-gray-300'];
     @endphp
-    <div class="bg-white rounded-2xl shadow mb-6 border-l-4 {{ $borderColor }} overflow-hidden">
+
+    <div class="bg-black text-white rounded-2xl shadow mb-6 border-l-4 {{ $borderColor }} overflow-hidden">
         <div class="p-6">
             <div class="flex items-start justify-between flex-wrap gap-4">
                 <div>
@@ -32,6 +38,33 @@
                             <span class="px-2 py-1 rounded-full text-xs bg-red-100 text-red-700 font-semibold">Tu pedido</span>
                         @endif
                     </div>
+<<<<<<< HEAD
+                    <p class="text-gray-400 text-sm mt-1">Cliente: <strong>{{ $order->client->name }}</strong></p>
+                    <p class="text-gray-300 text-sm mt-0.5">Dirección: <strong>{{ $order->delivery_address }}</strong></p>
+                    <p class="text-red-500 font-bold mt-1">S/ {{ number_format($order->total, 2) }}</p>
+                </div>
+
+                <form method="POST" action="{{ route('delivery.update-status', $order) }}" class="flex items-center gap-2">
+                    @csrf
+                    @method('PATCH')
+
+                    <select
+                        name="status"
+                        class="bg-black text-white border border-gray-700 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                        @if($order->status === 'ready')
+                            <option value="delivering">Recoger y salir a entregar</option>
+                        @elseif($order->status === 'delivering')
+                            <option value="delivered">Marcar como entregado</option>
+                        @endif
+                    </select>
+
+                    <button
+                        type="submit"
+                        class="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition">
+                        Actualizar
+                    </button>
+                </form>
+=======
                     <p class="text-gray-500 text-sm mt-2">
                         Cliente: <strong>{{ $order->client->name }}</strong>
                     </p>
@@ -72,9 +105,11 @@
                         </form>
                     @endif
                 </div>
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
             </div>
         </div>
     </div>
+
     @empty
     <div class="text-center py-20">
         <div class="text-6xl mb-4">🛵</div>

@@ -8,7 +8,11 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <div>
+<<<<<<< HEAD
+            <h2 class="text-2xl font-bold mb-4 text-red-600">Nuestra misión</h2>
+=======
             <h2 class="text-2xl font-bold mb-4 text-red-500">Nuestra misión</h2>
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
             <p class="text-gray-600 leading-relaxed">
                 EatHidden nació para dar visibilidad a los mejores cocineros que operan
                 sin un local físico. Creemos que la calidad no necesita cuatro paredes:
@@ -16,7 +20,11 @@
             </p>
         </div>
         <div>
+<<<<<<< HEAD
+            <h2 class="text-2xl font-bold mb-4 text-red-600">¿Qué es una dark kitchen?</h2>
+=======
             <h2 class="text-2xl font-bold mb-4 text-red-500">¿Qué es una dark kitchen?</h2>
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
             <p class="text-gray-600 leading-relaxed">
                 Una dark kitchen es un restaurante 100% orientado al delivery: sin salón,
                 sin atención presencial. Esto permite reducir costos y enfocarse únicamente
@@ -25,8 +33,19 @@
         </div>
     </div>
 
-    <div class="bg-gray-900 text-white rounded-2xl p-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+    <div class="bg-black text-white rounded-2xl p-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
         <div>
+<<<<<<< HEAD
+            <p class="text-5xl font-bold text-red-500 mb-2">100%</p>
+            <p class="text-gray-300">Enfoque en delivery</p>
+        </div>
+        <div>
+            <p class="text-5xl font-bold text-red-500 mb-2">4</p>
+            <p class="text-gray-300">Roles especializados</p>
+        </div>
+        <div>
+            <p class="text-5xl font-bold text-red-500 mb-2">30'</p>
+=======
             <p class="text-5xl font-bold text-red-400 mb-2">100%</p>
             <p class="text-gray-300">Enfoque en delivery</p>
         </div>
@@ -36,9 +55,14 @@
         </div>
         <div>
             <p class="text-5xl font-bold text-red-400 mb-2">30'</p>
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
             <p class="text-gray-300">Tiempo promedio de entrega</p>
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+@endsection
+=======
 @endsection
 
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6

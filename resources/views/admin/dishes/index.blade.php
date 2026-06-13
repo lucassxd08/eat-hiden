@@ -34,9 +34,9 @@
                     <td class="px-6 py-4 text-right font-semibold text-red-600">S/ {{ number_format($dish->price, 2) }}</td>
                     <td class="px-6 py-4 text-center">
                         @if($dish->available)
-                            <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Disponible</span>
+                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Disponible</span>
                         @else
-                            <span class="bg-gray-100 text-gray-500 text-xs font-semibold px-2.5 py-1 rounded-full">No disponible</span>
+                        <span class="bg-gray-100 text-gray-500 text-xs font-semibold px-2.5 py-1 rounded-full">No disponible</span>
                         @endif
                     </td>
                     <td class="px-6 py-4 text-center">
@@ -58,5 +58,9 @@
         </table>
     </div>
 </div>
+<<<<<<< HEAD
+@endsection
+=======
 @endsection
 
+>>>>>>> 5b8c974b928f3ecd035d68eff01a4f88fe2272d6
